@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS and JS variables</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2>Update CSS Variables with <span class="hl">JS</span></h2>
@@ -39,72 +40,6 @@
       alt=""
     />
 
-    <style>
-      :root {
-        --spacing: 10px;
-        --blur: 10px;
-        --base: #000;
-      }
-
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #0d0084;
-        font-family: sans-serif;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-        justify-content: center;
-        align-items: center;
-      }
-
-      h2 {
-        font-size: 4rem;
-        color: #fff;
-        display: inline;
-      }
-
-      .hl {
-        color: var(--base);
-      }
-
-      label {
-        color: #fff;
-        font-size: 2.3rem;
-      }
-
-      img {
-        width: 60%;
-        height: 60%;
-        padding: var(--spacing);
-        background: var(--base);
-        filter: blur(var(--blur));
-      }
-    </style>
-
-    <script>
-      const inputs = document.querySelectorAll("input");
-
-      function handleUpdate() {
-        const suffix = this.dataset.sizing || "";
-
-        document.documentElement.style.setProperty(
-          `--${this.name}`,
-          `${this.value}` + suffix
-        );
-      }
-
-      inputs.forEach((input) => input.addEventListener("change", handleUpdate));
-
-      inputs.forEach((input) =>
-        input.addEventListener("mousemove", handleUpdate)
-      );
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
