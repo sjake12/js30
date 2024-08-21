@@ -52,6 +52,16 @@ h2 {
   display: flex;
 }
 
+.plates li span {
+  cursor: pointer;
+  /* transition: all 0.15s ease; */
+}
+
+.plates li span:hover {
+  scale: 1.1;
+  color: red;
+}
+
 .plates label {
   flex: 1;
 }
